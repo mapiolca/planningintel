@@ -1,0 +1,193 @@
+# Stock Intelligence Module
+# Copyright (C) 2026 SiliconBlaze
+# Language file: en_US
+
+# Module info
+Module95100Name = Stock Intelligence
+Module95100Desc = ABC/XYZ analysis, demand forecasting, reorder planning with explainable formulas
+planningintelModuleDescription = Stock Intelligence - ABC/XYZ analysis, demand forecasting, reorder planning
+
+# Menu
+PlanningIntel = Stock Intelligence
+Dashboard = Dashboard
+InventoryIntelligence = Inventory Intelligence
+DemandForecasting = Demand Forecasting
+ReorderPlanning = Reorder Planning
+Settings = Settings
+
+# Dashboard
+PlanningIntelDashboard = Stock Intelligence Dashboard
+StockoutRiskCount = Products at Stockout Risk
+OverstockValue = Overstock Value
+DeadStockCount = Dead Stock Items
+DeadStockValue = Dead Stock Value
+ForecastAccuracy = Forecast Accuracy (MAPE)
+DemandTrend = Demand Trend (12 Months)
+ABCDistribution = ABC Distribution
+StockHealth = Stock Health Overview
+Healthy = Healthy
+TotalDemand = Total Demand
+
+# Inventory Intelligence
+ABCAnalysis = ABC Analysis
+XYZAnalysis = XYZ Analysis
+ABCXYZMatrix = ABC-XYZ Matrix
+DeadStock = Dead Stock
+SlowStock = Slow Moving Stock
+StockAging = Stock Aging
+StockoutRisk = Stockout Risk
+TotalRevenue = Total Revenue
+CumulativePercent = Cumulative %%
+ABCClass = ABC Class
+XYZClass = XYZ Class
+CombinedClass = Combined Class
+MeanQty = Mean Monthly Qty
+StdDev = Std Deviation
+CoefficientOfVariation = Coeff. of Variation (CV)
+CurrentStock = Current Stock
+CostPrice = Cost Price
+StockValue = Stock Value
+LastMovement = Last Movement
+MovementCount = Movements
+LastInbound = Last Inbound
+AgeDays = Age (Days)
+AvgDailyConsumption = Avg Daily Consumption
+LeadTimeDays = Lead Time (Days)
+RiskScore = Risk Score
+AtRisk = At Risk
+FormulaExplanation = Formula Explanation
+Rank = Rank
+Product = Product
+Warehouse = Warehouse
+Qty = Qty
+
+# ABC/XYZ formula descriptions
+ABCFormulaTitle = ABC Classification
+ABCFormulaDesc = Products ranked by cumulative revenue contribution. Class A = top %s%% of revenue | Class B = next %s%% | Class C = remaining %s%%
+XYZFormulaTitle = XYZ Classification
+XYZFormulaDesc = Products classified by demand variability (Coefficient of Variation). X: CV <= %s (stable) | Y: CV <= %s (variable) | Z: CV > %s (erratic)
+ABCXYZFormulaTitle = ABC-XYZ Combined Matrix
+ABCXYZFormulaDesc = Combines revenue importance (ABC) with demand predictability (XYZ). AX = high-value stable demand, CZ = low-value erratic demand
+DeadStockFormulaTitle = Dead Stock Detection
+DeadStockFormulaDesc = Products with zero stock movements in the last %s days despite having stock on hand
+SlowStockFormulaTitle = Slow Moving Stock
+SlowStockFormulaDesc = Products with fewer than %s stock movements in the last %s days
+StockAgingFormulaTitle = Stock Aging Analysis
+StockAgingFormulaDesc = Days since last inbound (receipt) movement per product per warehouse. Older stock = higher carrying cost
+StockoutRiskFormulaTitle = Stockout Risk Score
+StockoutRiskFormulaDesc = Risk Score = Current Stock / (Avg Daily Consumption x Lead Time). Score below %s = at risk of stockout
+
+# Forecasting
+SimpleMovingAverage = Simple Moving Average (SMA)
+WeightedMovingAverage = Weighted Moving Average (WMA)
+SeasonalIndex = Seasonal Index
+ForecastResult = Forecast Result
+ForecastInputs = Inputs Used
+ForecastFormula = Formula
+Periods = Periods
+Weights = Weights
+MonthlyDemandHistory = Monthly Demand History
+ForecastVsActual = Forecast vs Actual
+Actual = Actual
+Forecast = Forecast
+Method = Method
+Accuracy = Accuracy
+LastMonthActual = Last Month Actual
+ForecastNextMonth = Forecast (Next Month)
+SMAFormulaTitle = Simple Moving Average
+SMAFormulaDesc = SMA = Sum of last %s months demand / %s. Equal weight to all periods.
+WMAFormulaTitle = Weighted Moving Average
+WMAFormulaDesc = WMA = Sum(qty x weight) / Sum(weights). Recent months weighted more heavily (e.g. 3-month: weights 3,2,1).
+SeasonalFormulaTitle = Seasonal Index
+SeasonalFormulaDesc = Seasonal Index = Month Average / Overall Monthly Average. Index > 1 means above-average demand for that month.
+MAPEFormulaDesc = MAPE = Mean Absolute Percentage Error = (1/n) x Sum(|actual - forecast| / actual) x 100. Lower is better.
+Month = Month
+Index = Index
+NoForecastData = Insufficient historical data for forecasting. Need at least %s months of order/invoice history.
+
+# Reorder
+ReorderPlan = Reorder Plan
+ReorderPoint = Reorder Point (ROP)
+SafetyStock = Safety Stock
+EOQ = Economic Order Quantity (EOQ)
+BOMExplosion = BOM Explosion
+NeedsReorder = Needs Reorder
+SuggestedQty = Suggested Order Qty
+SupplierRef = Supplier
+SupplierPrice = Supplier Price
+UnitPrice = Unit Price
+ServiceLevel = Service Level
+OrderCost = Ordering Cost (S)
+HoldingCost = Holding Cost (H)
+AnnualDemand = Annual Demand (D)
+RequiredQty = Required Qty
+Shortage = Shortage
+BOMPath = BOM Path
+Depth = Depth
+MOQ = Min Order Qty
+Yes = Yes
+No = No
+ROPFormulaTitle = Reorder Point (ROP)
+ROPFormulaDesc = ROP = (Avg Daily Demand x Lead Time) + Safety Stock. Reorder when current stock falls to this level.
+SSFormulaTitle = Safety Stock
+SSFormulaDesc = Safety Stock = Z x Sigma(daily demand) x Sqrt(Lead Time). Z-score from service level: 90%%=1.28, 95%%=1.65, 99%%=2.33
+EOQFormulaTitle = Economic Order Quantity
+EOQFormulaDesc = EOQ = Sqrt(2 x D x S / H). D = annual demand, S = cost per order, H = annual holding cost per unit.
+BOMExplosionFormulaTitle = BOM Explosion
+BOMExplosionFormulaDesc = Cascades demand for a finished product through its Bill of Materials to calculate raw material requirements.
+SelectProduct = Select a product to view BOM explosion
+EnterDemandQty = Enter demand quantity
+
+# Settings page
+PlanningIntelSettings = Stock Intelligence Settings
+PlanningIntelSetup = Stock Intelligence Setup
+DataSource = Demand Data Source
+DataSourceHelp = Choose whether to calculate demand from customer orders or invoices
+UseOrders = Customer Orders
+UseInvoices = Customer Invoices
+AnalysisPeriod = Analysis Period (months)
+AnalysisPeriodHelp = Number of months of historical data used in analyses
+ABCThresholds = ABC Classification Thresholds
+ClassAPercent = Class A Cumulative Revenue %%
+ClassBPercent = Class A+B Cumulative Revenue %%
+XYZThresholds = XYZ Classification Thresholds
+ClassXThreshold = Class X CV Threshold (<=)
+ClassYThreshold = Class Y CV Threshold (<=)
+DeadSlowStock = Dead & Slow Stock Detection
+DeadStockDays = Dead Stock Threshold (days)
+DeadStockDaysHelp = Products with no movement in this many days are flagged as dead stock
+SlowStockThreshold = Slow Stock Movement Threshold
+SlowStockThresholdHelp = Products with fewer movements than this in the period are flagged as slow
+SlowStockDays = Slow Stock Period (days)
+ForecastSettings = Forecast Settings
+SMAMonths = SMA Period (months)
+WMAMonths = WMA Period (months)
+ReorderSettings = Reorder Planning Settings
+ServiceLevelPercent = Service Level (%%)
+ServiceLevelHelp = Higher service level = more safety stock. 95%% is common for important items.
+DefaultOrderCost = Default Ordering Cost
+DefaultOrderCostHelp = Cost to place one order (admin, shipping, receiving). Used in EOQ calculation.
+HoldingCostPercent = Holding Cost (%% of unit cost)
+HoldingCostPercentHelp = Annual cost to hold one unit in stock as a percentage of its cost price.
+DefaultLeadTime = Default Lead Time (days)
+DefaultLeadTimeHelp = Used when no supplier lead time is available for a product
+AlertSettings = Alert Thresholds
+StockoutRiskThreshold = Stockout Risk Score Threshold
+StockoutRiskThresholdHelp = Products with risk score below this value are flagged as at risk
+SaveSettings = Save Settings
+SettingsSaved = Settings saved successfully
+
+# Export
+ExportCSV = Export to CSV
+ExportData = Export Data
+
+# Common
+BackToModuleList = Back to module list
+NoDataAvailable = No data available for this analysis. Ensure you have stock movement and order/invoice history.
+ConfiguredDataSource = Data source: %s
+ConfiguredPeriod = Analysis period: %s months
+ProductsAnalyzed = Products analyzed: %s
+ShowFormula = Show Formula
+HideFormula = Hide Formula
+Ref = Ref
+Label = Label
