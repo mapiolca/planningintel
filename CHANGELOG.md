@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.0.1] - 2026-03-03
+
+### Added
+- Translate the totality of module in FR, DE, ES, IT.
+
 ## [1.0.0] - 2026-02-26
 
 ### Added
@@ -14,3 +19,4 @@
 - CSV export for all analysis types
 - 16 configurable parameters via admin settings
 - Transparent formulas displayed for every calculation
+
