@@ -49,7 +49,7 @@ class modplanningintel extends DolibarrModules
         $this->descriptionlong = 'planningintelModuleDescriptionLong';
         $this->editor_name = 'SiliconBlaze';
         $this->editor_url = 'https://siliconblaze.com';
-        $this->version = '1.0.0';
+        $this->version = '1.0.1';
         $this->phpmin = array(7, 0);
         $this->need_dolibarr_min_version = array(14, 0);
         $this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
@@ -226,3 +226,4 @@ class modplanningintel extends DolibarrModules
         return $this->_remove($sql, $options);
     }
 }
+
