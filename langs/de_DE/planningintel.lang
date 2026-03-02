@@ -3,200 +3,199 @@
 # Sprachdatei: de_DE
 
 # Module info
-Module95100Name = Stock Intelligence
-Module95100Desc = ABC/XYZ analysis, demand forecasting, reorder planning with explainable formulas
-planningintelModuleDescription = Stock Intelligence - ABC/XYZ analysis, demand forecasting, reorder planning
+Module95100Name = Bestandsintelligenz
+Module95100Desc = ABC/XYZ-Analyse, Bedarfsprognose, Nachschubplanung mit erklärbaren Formeln
+planningintelModuleDescription = Bestandsintelligenz - ABC/XYZ-Analyse, Bedarfsprognose, Nachschubplanung
 
 # Menu
-PlanningIntel = Stock Intelligence
-Dashboard = Dashboard
-InventoryIntelligence = Inventory Intelligence
-DemandForecasting = Demand Forecasting
-ReorderPlanning = Reorder Planning
-Settings = Settings
+PlanningIntel = Bestandsintelligenz
+Dashboard = Übersicht
+InventoryIntelligence = Lagerintelligenz
+DemandForecasting = Bedarfsprognose
+ReorderPlanning = Nachschubplanung
+Settings = Einstellungen
 
 # Dashboard
-PlanningIntelDashboard = Stock Intelligence Dashboard
-StockoutRiskCount = Products at Stockout Risk
-OverstockValue = Overstock Value
-DeadStockCount = Dead Stock Items
-DeadStockValue = Dead Stock Value
-ForecastAccuracy = Forecast Accuracy (MAPE)
-DemandTrend = Demand Trend (12 Months)
-ABCDistribution = ABC Distribution
-StockHealth = Stock Health Overview
-Healthy = Healthy
-TotalDemand = Total Demand
+PlanningIntelDashboard = Bestandsintelligenz Dashboard
+StockoutRiskCount = Produkte mit Fehlbestandsrisiko
+OverstockValue = Überbestandswert
+DeadStockCount = Ladenhüter
+DeadStockValue = Wert der Ladenhüter
+ForecastAccuracy = Prognose Genauigkeit (MAPE)
+DemandTrend = Nachfragetrend (12 Monate)
+ABCDistribution = ABC-Verteilung
+StockHealth = Übersicht Lagerzustand
+Healthy = Gesund
+TotalDemand = Gesamtnachfrage
 
 # Inventory Intelligence
-ABCAnalysis = ABC Analysis
-XYZAnalysis = XYZ Analysis
-ABCXYZMatrix = ABC-XYZ Matrix
-DeadStock = Dead Stock
-SlowStock = Slow Moving Stock
-StockAging = Stock Aging
-StockoutRisk = Stockout Risk
-TotalRevenue = Total Revenue
-CumulativePercent = Cumulative %%
-ABCClass = ABC Class
-XYZClass = XYZ Class
-CombinedClass = Combined Class
-MeanQty = Mean Monthly Qty
-StdDev = Std Deviation
-CoefficientOfVariation = Coeff. of Variation (CV)
-CurrentStock = Current Stock
-CostPrice = Cost Price
-StockValue = Stock Value
-LastMovement = Last Movement
-MovementCount = Movements
-LastInbound = Last Inbound
-AgeDays = Age (Days)
-AvgDailyConsumption = Avg Daily Consumption
-LeadTimeDays = Lead Time (Days)
-RiskScore = Risk Score
-AtRisk = At Risk
-FormulaExplanation = Formula Explanation
-Rank = Rank
-Product = Product
-Warehouse = Warehouse
-Qty = Qty
+ABCAnalysis = ABC-Analyse
+XYZAnalysis = XYZ-Analyse
+ABCXYZMatrix = ABC-XYZ-Matrix
+DeadStock = Ladenhüter
+SlowStock = Langsam drehender Bestand
+StockAging = Bestandsalterung
+StockoutRisk = Fehlbestandsrisiko
+TotalRevenue = Gesamtumsatz
+CumulativePercent = Kumuliert %%
+ABCClass = ABC-Klasse
+XYZClass = XYZ-Klasse
+CombinedClass = Kombinierte Klasse
+MeanQty = Ø Monatsmenge
+StdDev = Standardabweichung
+CoefficientOfVariation = Variationskoeff. (CV)
+CurrentStock = Aktueller Bestand
+CostPrice = Einstandspreis
+StockValue = Bestandswert
+LastMovement = Letzte Bewegung
+MovementCount = Bewegungen
+LastInbound = Letzter Zugang
+AgeDays = Alter (Tage)
+AvgDailyConsumption = Ø Tagesverbrauch
+LeadTimeDays = Lieferzeit (Tage)
+RiskScore = Risikowert
+AtRisk = Gefährdet
+FormulaExplanation = Formelerklärung
+Rank = Rang
+Product = Produkt
+Warehouse = Lager
+Qty = Menge
 
 # ABC/XYZ formula descriptions
-ABCFormulaTitle = ABC Classification
-ABCFormulaDesc = Products ranked by cumulative revenue contribution. Class A = top %s%% of revenue | Class B = next %s%% | Class C = remaining %s%%
-XYZFormulaTitle = XYZ Classification
-XYZFormulaDesc = Products classified by demand variability (Coefficient of Variation). X: CV <= %s (stable) | Y: CV <= %s (variable) | Z: CV > %s (erratic)
-ABCXYZFormulaTitle = ABC-XYZ Combined Matrix
-ABCXYZFormulaDesc = Combines revenue importance (ABC) with demand predictability (XYZ). AX = high-value stable demand, CZ = low-value erratic demand
-DeadStockFormulaTitle = Dead Stock Detection
-DeadStockFormulaDesc = Products with zero stock movements in the last %s days despite having stock on hand
-SlowStockFormulaTitle = Slow Moving Stock
-SlowStockFormulaDesc = Products with fewer than %s stock movements in the last %s days
-StockAgingFormulaTitle = Stock Aging Analysis
-StockAgingFormulaDesc = Days since last inbound (receipt) movement per product per warehouse. Older stock = higher carrying cost
-StockoutRiskFormulaTitle = Stockout Risk Score
-StockoutRiskFormulaDesc = Risk Score = Current Stock / (Avg Daily Consumption x Lead Time). Score below %s = at risk of stockout
+ABCFormulaTitle = ABC-Klassifizierung
+ABCFormulaDesc = Produkte nach kumuliertem Umsatzbeitrag sortiert. Klasse A = oberste %s%% Umsatz | Klasse B = nächste %s%% | Klasse C = verbleibende %s%%
+XYZFormulaTitle = XYZ-Klassifizierung
+XYZFormulaDesc = Produkte nach Nachfragevariabilität (Variationskoeffizient) klassifiziert. X: CV <= %s (stabil) | Y: CV <= %s (variabel) | Z: CV > %s (sprunghaft)
+ABCXYZFormulaTitle = ABC-XYZ Kombiniert Matrix
+ABCXYZFormulaDesc = Kombiniert Umsatzrelevanz (ABC) mit Nachfragevorhersagbarkeit (XYZ). AX = hoher stabiler Wert, CZ = niedriger sprunghafter Wert
+DeadStockFormulaTitle = Ladenhüter Detection
+DeadStockFormulaDesc = Products with zero stock movements in the last %s Tage despite having stock on hand
+SlowStockFormulaTitle = Langsam drehender Bestand
+SlowStockFormulaDesc = Products with fewer than %s stock movements in the last %s Tage
+StockAgingFormulaTitle = Bestandsalterung Analysis
+StockAgingFormulaDesc = Tage seit der letzten Zugangsbewegung (Wareneingang) je Produkt und Lager. Älterer Bestand = höhere Lagerkosten
+StockoutRiskFormulaTitle = Fehlbestandsrisiko Score
+StockoutRiskFormulaDesc = Risikowert = Aktueller Bestand / (Ø Tagesverbrauch x Lead Time). Score below %s = at risk of stockout
 
 # Forecasting
-SimpleMovingAverage = Simple Moving Average (SMA)
-WeightedMovingAverage = Weighted Moving Average (WMA)
-SeasonalIndex = Seasonal Index
-ForecastResult = Forecast Result
-ForecastInputs = Inputs Used
-ForecastFormula = Formula
-Periods = Periods
-Weights = Weights
-MonthlyDemandHistory = Monthly Demand History
-ForecastVsActual = Forecast vs Actual
-Actual = Actual
-Forecast = Forecast
-Method = Method
-Accuracy = Accuracy
-LastMonthActual = Last Month Actual
-ForecastNextMonth = Forecast (Next Month)
-SMAFormulaTitle = Simple Moving Average
-SMAFormulaDesc = SMA = Sum of last %s months demand / %s. Equal weight to all periods.
-WMAFormulaTitle = Weighted Moving Average
-WMAFormulaDesc = WMA = Sum(qty x weight) / Sum(weights). Recent months weighted more heavily (e.g. 3-month: weights 3,2,1).
-SeasonalFormulaTitle = Seasonal Index
-SeasonalFormulaDesc = Seasonal Index = Month Average / Overall Monthly Average. Index > 1 means above-average demand for that month.
-MAPEFormulaDesc = MAPE = Mean Absolute Percentage Error = (1/n) x Sum(|actual - forecast| / actual) x 100. Lower is better.
-Month = Month
+SimpleMovingAverage = Einfacher gleitender Durchschnitt (SMA)
+WeightedMovingAverage = Gewichteter gleitender Durchschnitt (WMA)
+SeasonalIndex = Saisonindex
+ForecastResult = Prognoseergebnis
+ForecastInputs = Verwendete Eingaben
+ForecastFormula = Formel
+Periods = Perioden
+Weights = Gewichte
+MonthlyDemandHistory = Monatliche Nachfragehistorie
+ForecastVsActual = Prognose vs Ist
+Actual = Ist
+Forecast = Prognose
+Method = Methode
+Accuracy = Genauigkeit
+LastMonthActual = Last Monat Ist
+ForecastNextMonth = Prognose (Next Monat)
+SMAFormulaTitle = Einfacher gleitender Durchschnitt
+SMAFormulaDesc = SMA = Sum of last %s Monate demand / %s. Equal weight to all periods.
+WMAFormulaTitle = Gewichteter gleitender Durchschnitt
+WMAFormulaDesc = WMA = Sum(qty x weight) / Sum(weights). Recent Monate weighted more heavily (e.g. 3-month: weights 3,2,1).
+SeasonalFormulaTitle = Saisonindex
+SeasonalFormulaDesc = Saisonindex = Monat Average / Overall Monatly Average. Index > 1 means above-average demand for that month.
+MAPEFormulaDesc = MAPE = mittlerer absoluter prozentualer Fehler = (1/n) x Summe(|Ist - Prognose| / Ist) x 100. Niedriger ist besser.
+Month = Monat
 Index = Index
-NoForecastData = Insufficient historical data for forecasting. Need at least %s months of order/invoice history.
+NoForecastData = Insufficient historical data for forecasting. Need at least %s Monate of order/invoice history.
 
 # Reorder
-ReorderPlan = Reorder Plan
-ReorderPoint = Reorder Point (ROP)
-SafetyStock = Safety Stock
-EOQ = Economic Order Quantity (EOQ)
-BOMExplosion = BOM Explosion
-NeedsReorder = Needs Reorder
-SuggestedQty = Suggested Order Qty
-SupplierRef = Supplier
-SupplierPrice = Supplier Price
-UnitPrice = Unit Price
-ServiceLevel = Service Level
-OrderCost = Ordering Cost (S)
-HoldingCost = Holding Cost (H)
-AnnualDemand = Annual Demand (D)
-RequiredQty = Required Qty
-Shortage = Shortage
-BOMPath = BOM Path
-Depth = Depth
-MOQ = Min Order Qty
-Yes = Yes
-No = No
-ROPFormulaTitle = Reorder Point (ROP)
-ROPFormulaDesc = ROP = (Avg Daily Demand x Lead Time) + Safety Stock. Reorder when current stock falls to this level.
-SSFormulaTitle = Safety Stock
-SSFormulaDesc = Safety Stock = Z x Sigma(daily demand) x Sqrt(Lead Time). Z-score from service level: 90%%=1.28, 95%%=1.65, 99%%=2.33
-EOQFormulaTitle = Economic Order Quantity
-EOQFormulaDesc = EOQ = Sqrt(2 x D x S / H). D = annual demand, S = cost per order, H = annual holding cost per unit.
-BOMExplosionFormulaTitle = BOM Explosion
-BOMExplosionFormulaDesc = Cascades demand for a finished product through its Bill of Materials to calculate raw material requirements.
-SelectProduct = Select a product to view BOM explosion
-EnterDemandQty = Enter demand quantity
+ReorderPlan = Nachschubplan
+ReorderPoint = Meldebestand (ROP)
+SafetyStock = Sicherheitsbestand
+EOQ = Optimale Bestellmenge (EOQ)
+BOMExplosion = Stücklistenauflösung
+NeedsReorder = Nachbestellen nötig
+SuggestedQty = Vorgeschlagene Bestellmenge
+SupplierRef = Lieferant
+SupplierPrice = Lieferant Price
+UnitPrice = Stückpreis
+ServiceLevel = Servicegrad
+OrderCost = Bestellkosten (S)
+HoldingCost = Lagerhaltungskosten (H)
+AnnualDemand = Jahresbedarf (D)
+RequiredQty = Benötigte Menge
+Shortage = Fehlmenge
+BOMPath = Stücklistenpfad
+Depth = Tiefe
+MOQ = Mindestbestellmenge
+Yes = Ja
+No = Nein
+ROPFormulaTitle = Meldebestand (ROP)
+ROPFormulaDesc = ROP = (Avg Daily Demand x Lead Time) + Sicherheitsbestand. Reorder when current stock falls to this level.
+SSFormulaTitle = Sicherheitsbestand
+SSFormulaDesc = Sicherheitsbestand = Z x Sigma(daily demand) x Sqrt(Lead Time). Z-score from service level: 90%%=1.28, 95%%=1.65, 99%%=2.33
+EOQFormulaTitle = Optimale Bestellmenge
+EOQFormulaDesc = EOQ = Wurzel(2 x D x S / H). D = Jahresbedarf, S = Kosten pro Bestellung, H = jährliche Lagerkosten pro Einheit.
+BOMExplosionFormulaTitle = Stücklistenauflösung
+BOMExplosionFormulaDesc = Verteilt den Bedarf eines Endprodukts über die Stückliste, um den Rohmaterialbedarf zu berechnen.
+SelectProduct = Produkt auswählen, um die Stücklistenauflösung zu sehen
+EnterDemandQty = Bedarfsmenge eingeben
 
 # Settings page
-PlanningIntelSettings = Stock Intelligence Settings
-PlanningIntelSetup = Stock Intelligence Setup
-DataSource = Demand Data Source
-DataSourceHelp = Choose whether to calculate demand from customer orders or invoices
-UseOrders = Customer Orders
-UseInvoices = Customer Invoices
-AnalysisPeriod = Analysis Period (months)
-AnalysisPeriodHelp = Number of months of historical data used in analyses
-ABCThresholds = ABC Classification Thresholds
-ClassAPercent = Class A Cumulative Revenue %%
-ClassBPercent = Class A+B Cumulative Revenue %%
-XYZThresholds = XYZ Classification Thresholds
-ClassXThreshold = Class X CV Threshold (<=)
-ClassYThreshold = Class Y CV Threshold (<=)
-DeadSlowStock = Dead & Slow Stock Detection
-DeadStockDays = Dead Stock Threshold (days)
-DeadStockDaysHelp = Products with no movement in this many days are flagged as dead stock
-SlowStockThreshold = Slow Stock Movement Threshold
-SlowStockThresholdHelp = Products with fewer movements than this in the period are flagged as slow
-SlowStockDays = Slow Stock Period (days)
-ForecastSettings = Forecast Settings
-SMAMonths = SMA Period (months)
-WMAMonths = WMA Period (months)
-ReorderSettings = Reorder Planning Settings
-ServiceLevelPercent = Service Level (%%)
-ServiceLevelHelp = Higher service level = more safety stock. 95%% is common for important items.
-DefaultOrderCost = Default Ordering Cost
-DefaultOrderCostHelp = Cost to place one order (admin, shipping, receiving). Used in EOQ calculation.
-HoldingCostPercent = Holding Cost (%% of unit cost)
-HoldingCostPercentHelp = Annual cost to hold one unit in stock as a percentage of its cost price.
-DefaultLeadTime = Default Lead Time (days)
-DefaultLeadTimeHelp = Used when no supplier lead time is available for a product
-AlertSettings = Alert Thresholds
-StockoutRiskThreshold = Stockout Risk Score Threshold
-StockoutRiskThresholdHelp = Products with risk score below this value are flagged as at risk
-SaveSettings = Save Settings
-SettingsSaved = Settings saved successfully
+PlanningIntelSettings = Bestandsintelligenz Einstellungen
+PlanningIntelSetup = Bestandsintelligenz Setup
+DataSource = Datenquelle für Bedarf
+DataSourceHelp = Wählen Sie, ob der Bedarf aus Kundenaufträgen oder Rechnungen berechnet werden soll
+UseOrders = Kundenaufträge
+UseInvoices = Kundenrechnungen
+AnalysisPeriod = Analysezeitraum (Monate)
+AnalysisPeriodHelp = Number of Monate of historical data used in analyses
+ABCThresholds = ABC-Klassifizierungsschwellen
+ClassAPercent = Kumulierte Umsätze Klasse A %%
+ClassBPercent = Kumulierte Umsätze Klasse A+B %%
+XYZThresholds = XYZ-Klassifizierungsschwellen
+ClassXThreshold = Klasse-X-CV-Schwelle (<=)
+ClassYThreshold = Klasse-Y-CV-Schwelle (<=)
+DeadSlowStock = Erkennung von Ladenhütern und Langsamdrehern
+DeadStockDays = Ladenhüter Threshold (Tage)
+DeadStockDaysHelp = Products with no movement in this many Tage are flagged as dead stock
+SlowStockThreshold = Schwelle für langsame Lagerbewegung
+SlowStockThresholdHelp = Produkte mit weniger Bewegungen als dieser Wert im Zeitraum werden als langsam markiert
+SlowStockDays = Slow Stock Period (Tage)
+ForecastSettings = Prognose Einstellungen
+SMAMonths = SMA Period (Monate)
+WMAMonths = WMA Period (Monate)
+ReorderSettings = Nachschubplanung Einstellungen
+ServiceLevelPercent = Servicegrad (%%)
+ServiceLevelHelp = Höherer Servicegrad = mehr Sicherheitsbestand. 95%% ist üblich für wichtige Artikel.
+DefaultOrderCost = Default Bestellkosten
+DefaultOrderCostHelp = Kosten für eine Bestellung (Admin, Versand, Wareneingang). Verwendet in EOQ-Berechnung.
+HoldingCostPercent = Lagerhaltungskosten (%% of unit cost)
+HoldingCostPercentHelp = Jährliche Kosten für das Halten einer Einheit auf Lager als Prozentsatz des Einstandspreises.
+DefaultLeadTime = Default Lead Time (Tage)
+DefaultLeadTimeHelp = Wird verwendet, wenn für ein Produkt keine Lieferantenlieferzeit verfügbar ist
+AlertSettings = Alarmschwellen
+StockoutRiskThreshold = Fehlbestandsrisiko Score Threshold
+StockoutRiskThresholdHelp = Produkte mit einem Risikowert unter diesem Wert werden als gefährdet markiert
+SaveSettings = Save Einstellungen
+SettingsSaved = Einstellungen saved successfully
 
 # Export
-ExportCSV = Export to CSV
-ExportData = Export Data
+ExportCSV = Als CSV exportieren
+ExportData = Daten exportieren
 
 # Common
-BackToModuleList = Back to module list
-NoDataAvailable = No data available for this analysis. Ensure you have stock movement and order/invoice history.
-ConfiguredDataSource = Data source: %s
-ConfiguredPeriod = Analysis period: %s months
-ProductsAnalyzed = Products analyzed: %s
-ShowFormula = Show Formula
-HideFormula = Hide Formula
+BackToModuleList = Zurück zur Modulliste
+NoDataAvailable = Keine Daten für diese Analyse verfügbar. Bitte Lagerbewegungen und Auftrags-/Rechnungshistorie prüfen.
+ConfiguredDataSource = Datenquelle: %s
+ConfiguredPeriod = Analysezeitraum: %s Monate
+ProductsAnalyzed = Analysierte Produkte: %s
+ShowFormula = Formel anzeigen
+HideFormula = Formel ausblenden
 Ref = Ref
-Label = Label
+Label = Bezeichnung
 
 BackToList = Zurück zur Liste
 ProductId = Produkt-ID
 Visual = Visualisierung
 Days = Tage
-
 MonthsShort = Monate
 NotAvailable = k.A.
 ExplodeBOM = Stückliste auflösen
