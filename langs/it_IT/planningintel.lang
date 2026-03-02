@@ -140,13 +140,13 @@ EnterDemandQty = Inserisci quantità domanda
 
 # Settings page
 PlanningIntelSettings = Intelligenza di Magazzino Impostazioni
-PlanningIntelSetup = Intelligenza di Magazzino Setup
+PlanningIntelSetup = Configurazione Intelligenza di Magazzino
 DataSource = Fonte dati domanda
 DataSourceHelp = Scegli se calcolare la domanda da ordini cliente o fatture
 UseOrders = Ordini cliente
 UseInvoices = Fatture cliente
 AnalysisPeriod = Periodo di analisi (mesi)
-AnalysisPeriodHelp = Number of mesi of historical data used in analyses
+AnalysisPeriodHelp = Numero di mesi di storico usati nelle analisi
 ABCThresholds = Soglie classificazione ABC
 ClassAPercent = %% cumulata ricavi classe A
 ClassBPercent = %% cumulata ricavi classe A+B
@@ -154,28 +154,28 @@ XYZThresholds = Soglie classificazione XYZ
 ClassXThreshold = Soglia CV classe X (<=)
 ClassYThreshold = Soglia CV classe Y (<=)
 DeadSlowStock = Rilevamento stock morto e lento
-DeadStockDays = Stock morto Threshold (giorni)
-DeadStockDaysHelp = Products with no movement in this many giorni are flagged as dead stock
+DeadStockDays = Soglia stock morto (giorni)
+DeadStockDaysHelp = I prodotti senza movimenti per questo numero di giorni vengono marcati come stock morto
 SlowStockThreshold = Soglia movimenti stock lento
 SlowStockThresholdHelp = I prodotti con meno movimenti di questa soglia nel periodo vengono marcati come lenti
-SlowStockDays = Slow Stock Period (giorni)
-ForecastSettings = Previsione Impostazioni
-SMAMonths = SMA Period (mesi)
-WMAMonths = WMA Period (mesi)
-ReorderSettings = Pianificazione Riordino Impostazioni
+SlowStockDays = Periodo stock lento (giorni)
+ForecastSettings = Impostazioni previsione
+SMAMonths = Periodo SMA (mesi)
+WMAMonths = Periodo WMA (mesi)
+ReorderSettings = Impostazioni pianificazione riordino
 ServiceLevelPercent = Livello di servizio (%%)
 ServiceLevelHelp = Un livello di servizio più alto implica più scorta di sicurezza. 95%% è comune per articoli importanti.
-DefaultOrderCost = Default Costo ordine
+DefaultOrderCost = Costo ordine predefinito
 DefaultOrderCostHelp = Costo per emettere un ordine (amministrazione, spedizione, ricezione). Usato nel calcolo EOQ.
-HoldingCostPercent = Costo di mantenimento (%% of unit cost)
+HoldingCostPercent = Costo di mantenimento (%% del costo unitario)
 HoldingCostPercentHelp = Costo annuo per mantenere una unità in stock come percentuale del prezzo di costo.
-DefaultLeadTime = Default Lead Time (giorni)
+DefaultLeadTime = Lead time predefinito (giorni)
 DefaultLeadTimeHelp = Usato quando non è disponibile un lead time fornitore per un prodotto
 AlertSettings = Soglie di allerta
-StockoutRiskThreshold = Rischio rottura stock Score Threshold
+StockoutRiskThreshold = Soglia punteggio rischio rottura stock
 StockoutRiskThresholdHelp = I prodotti con punteggio di rischio sotto questo valore sono marcati a rischio
-SaveSettings = Save Impostazioni
-SettingsSaved = Impostazioni saved successfully
+SaveSettings = Salva impostazioni
+SettingsSaved = Impostazioni salvate correttamente
 
 # Export
 ExportCSV = Esporta in CSV
@@ -210,3 +210,10 @@ ExportHeaderAgeDays = Età (giorni)
 ExportHeaderFormula = Formula
 
 planningintelModuleDescriptionLong = Modulo PlanningIntel: classificazione inventario (ABC/XYZ), previsione domanda (SMA, WMA, stagionale), pianificazione riordino (ROP, scorta di sicurezza, EOQ) ed esplosione distinta base. Analisi in sola lettura sui dati core.
+ROPFormulaDisplay = ROP = (Domanda media giornaliera × Lead time) + Scorta di sicurezza
+SSFormulaDisplay = SS = Z × σ(giornaliera) × √(LT)
+EOQFormulaDisplay = EOQ = √(2 × D × S / H)
+EOQFormulaCannotCalculate = Impossibile calcolare EOQ con i dati attuali
+DeadStockFilterFormulaDisplay = Filtro: stock > 0 E (nessun movimento O ultimo movimento > %s giorni)
+SlowStockFilterFormulaDisplay = Filtro: movimenti > 0 E movimenti < %s negli ultimi %s giorni
+StockoutRiskFormulaDisplay = Punteggio rischio = Stock attuale / (consumo medio giornaliero x lead time in giorni)

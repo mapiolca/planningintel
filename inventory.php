@@ -260,7 +260,7 @@ if ($view == 'dead') {
     planningintelPrintFormulaCard(
         $langs->trans('DeadStockFormulaTitle'),
         $langs->trans('DeadStockFormulaDesc', $deadDays),
-        'Filter: stock > 0 AND (no movements OR last movement > '.$deadDays.' days ago)'
+        $langs->trans('DeadStockFilterFormulaDisplay', $deadDays)
     );
 
     $data = $intel->getDeadStock();
@@ -310,7 +310,7 @@ if ($view == 'slow') {
     planningintelPrintFormulaCard(
         $langs->trans('SlowStockFormulaTitle'),
         $langs->trans('SlowStockFormulaDesc', $slowThreshold, $slowDays),
-        'Filter: movements > 0 AND movements < '.$slowThreshold.' in last '.$slowDays.' days'
+        $langs->trans('SlowStockFilterFormulaDisplay', $slowThreshold, $slowDays)
     );
 
     $data = $intel->getSlowStock();
@@ -399,7 +399,7 @@ if ($view == 'stockout') {
     planningintelPrintFormulaCard(
         $langs->trans('StockoutRiskFormulaTitle'),
         $langs->trans('StockoutRiskFormulaDesc', $riskThreshold),
-        'Risk Score = Current Stock / (Avg Daily Consumption x Lead Time Days)'
+        $langs->trans('StockoutRiskFormulaDisplay')
     );
 
     $data = $intel->getStockoutRisk();

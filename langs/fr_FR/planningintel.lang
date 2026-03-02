@@ -146,36 +146,36 @@ DataSourceHelp = Choisissez de calculer la demande à partir des commandes clien
 UseOrders = Commandes clients
 UseInvoices = Factures clients
 AnalysisPeriod = Période d'analyse (mois)
-AnalysisPeriodHelp = Number of mois of historical data used in analyses
-ABCThresholds = ABC Seuils de classification
-ClassAPercent = Class A Cumulé Revenue %%
-ClassBPercent = Class A+B Cumulé Revenue %%
-XYZThresholds = XYZ Seuils de classification
-ClassXThreshold = Class X CV Seuil (<=)
-ClassYThreshold = Class Y CV Seuil (<=)
+AnalysisPeriodHelp = Nombre de mois d'historique utilisé dans les analyses
+ABCThresholds = Seuils de classification ABC
+ClassAPercent = %% cumulé du chiffre d'affaires classe A
+ClassBPercent = %% cumulé du chiffre d'affaires classes A+B
+XYZThresholds = Seuils de classification XYZ
+ClassXThreshold = Seuil CV classe X (<=)
+ClassYThreshold = Seuil CV classe Y (<=)
 DeadSlowStock = Détection stock mort et lent
-DeadStockDays = Stock mort Seuil (jours)
-DeadStockDaysHelp = Products with no movement in this many jours are flagged as dead stock
-SlowStockThreshold = Slow Stock Movement Seuil
+DeadStockDays = Seuil stock mort (jours)
+DeadStockDaysHelp = Les produits sans mouvement depuis ce nombre de jours sont marqués en stock mort
+SlowStockThreshold = Seuil de mouvements pour stock lent
 SlowStockThresholdHelp = Les produits avec moins de mouvements que ce seuil sur la période sont marqués comme lents
-SlowStockDays = Slow Stock Period (jours)
-ForecastSettings = Prévision Paramètres
-SMAMonths = SMA Period (mois)
-WMAMonths = WMA Period (mois)
-ReorderSettings = Planification de Réapprovisionnement Paramètres
+SlowStockDays = Période stock lent (jours)
+ForecastSettings = Paramètres de prévision
+SMAMonths = Période SMA (mois)
+WMAMonths = Période WMA (mois)
+ReorderSettings = Paramètres de planification de réapprovisionnement
 ServiceLevelPercent = Taux de service (%%)
 ServiceLevelHelp = Un taux de service plus élevé implique plus de stock de sécurité. 95%% est courant pour les articles importants.
-DefaultOrderCost = Default Coût de passation
+DefaultOrderCost = Coût de passation par défaut
 DefaultOrderCostHelp = Coût pour passer une commande (administration, expédition, réception). Utilisé pour le calcul EOQ.
-HoldingCostPercent = Coût de possession (%% of unit cost)
+HoldingCostPercent = Coût de possession (%% du coût unitaire)
 HoldingCostPercentHelp = Coût annuel de possession d'une unité en stock, en pourcentage de son prix de revient.
-DefaultLeadTime = Default Lead Time (jours)
+DefaultLeadTime = Délai par défaut (jours)
 DefaultLeadTimeHelp = Utilisé lorsqu'aucun délai fournisseur n'est disponible pour un produit
-AlertSettings = Alert Seuils
-StockoutRiskThreshold = Risque de rupture Score Seuil
+AlertSettings = Seuils d'alerte
+StockoutRiskThreshold = Seuil du score de risque de rupture
 StockoutRiskThresholdHelp = Les produits avec un score de risque inférieur à cette valeur sont marqués à risque
-SaveSettings = Save Paramètres
-SettingsSaved = Paramètres saved successfully
+SaveSettings = Enregistrer les paramètres
+SettingsSaved = Paramètres enregistrés avec succès
 
 # Export
 ExportCSV = Exporter en CSV
@@ -210,3 +210,10 @@ ExportHeaderAgeDays = Âge (jours)
 ExportHeaderFormula = Formule
 
 planningintelModuleDescriptionLong = Module PlanningIntel : classification des stocks (ABC/XYZ), prévision de la demande (SMA, WMA, saisonnier), planification de réapprovisionnement (ROP, stock de sécurité, EOQ) et explosion de nomenclature. Analyse en lecture seule sur les données cœur.
+ROPFormulaDisplay = ROP = (Demande journalière moyenne × Délai) + Stock de sécurité
+SSFormulaDisplay = SS = Z × σ(journalier) × √(LT)
+EOQFormulaDisplay = EOQ = √(2 × D × S / H)
+EOQFormulaCannotCalculate = Impossible de calculer l'EOQ avec les données actuelles
+DeadStockFilterFormulaDisplay = Filtre : stock > 0 ET (aucun mouvement OU dernier mouvement > %s jours)
+SlowStockFilterFormulaDisplay = Filtre : mouvements > 0 ET mouvements < %s sur les %s derniers jours
+StockoutRiskFormulaDisplay = Score de risque = Stock actuel / (consommation journalière moyenne x délai en jours)

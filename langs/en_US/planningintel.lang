@@ -210,3 +210,10 @@ ExportHeaderAgeDays = Age Days
 ExportHeaderFormula = Formula
 
 planningintelModuleDescriptionLong = PlanningIntel module: inventory classification (ABC/XYZ), demand forecasting (SMA, WMA, seasonal), reorder planning (ROP, safety stock, EOQ) and BOM explosion. Read-only analysis over core data.
+ROPFormulaDisplay = ROP = (Avg Daily Demand × Lead Time) + Safety Stock
+SSFormulaDisplay = SS = Z × σ(daily) × √(LT)
+EOQFormulaDisplay = EOQ = √(2 × D × S / H)
+EOQFormulaCannotCalculate = Cannot calculate EOQ with current data
+DeadStockFilterFormulaDisplay = Filter: stock > 0 AND (no movements OR last movement > %s days ago)
+SlowStockFilterFormulaDisplay = Filter: movements > 0 AND movements < %s in last %s days
+StockoutRiskFormulaDisplay = Risk Score = Current Stock / (Avg Daily Consumption x Lead Time Days)

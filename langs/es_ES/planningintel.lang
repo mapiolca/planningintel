@@ -140,13 +140,13 @@ EnterDemandQty = Introduzca la cantidad demandada
 
 # Settings page
 PlanningIntelSettings = Inteligencia de Inventario Configuración
-PlanningIntelSetup = Inteligencia de Inventario Setup
+PlanningIntelSetup = Configuración de Inteligencia de Inventario
 DataSource = Fuente de datos de demanda
 DataSourceHelp = Elija si calcular la demanda desde pedidos de clientes o facturas
 UseOrders = Pedidos de clientes
 UseInvoices = Facturas de clientes
 AnalysisPeriod = Período de análisis (meses)
-AnalysisPeriodHelp = Number of meses of historical data used in analyses
+AnalysisPeriodHelp = Número de meses de histórico usados en los análisis
 ABCThresholds = Umbrales de clasificación ABC
 ClassAPercent = %% acumulado de ingresos clase A
 ClassBPercent = %% acumulado de ingresos clase A+B
@@ -154,28 +154,28 @@ XYZThresholds = Umbrales de clasificación XYZ
 ClassXThreshold = Umbral CV clase X (<=)
 ClassYThreshold = Umbral CV clase Y (<=)
 DeadSlowStock = Detección de stock muerto y lento
-DeadStockDays = Stock muerto Threshold (días)
-DeadStockDaysHelp = Products with no movement in this many días are flagged as dead stock
+DeadStockDays = Umbral de stock muerto (días)
+DeadStockDaysHelp = Los productos sin movimiento durante este número de días se marcan como stock muerto
 SlowStockThreshold = Umbral de movimientos para stock lento
 SlowStockThresholdHelp = Los productos con menos movimientos que este valor en el período se marcan como lentos
-SlowStockDays = Slow Stock Period (días)
-ForecastSettings = Pronóstico Configuración
-SMAMonths = SMA Period (meses)
-WMAMonths = WMA Period (meses)
-ReorderSettings = Planificación de Reaprovisionamiento Configuración
+SlowStockDays = Período de stock lento (días)
+ForecastSettings = Configuración de pronóstico
+SMAMonths = Período SMA (meses)
+WMAMonths = Período WMA (meses)
+ReorderSettings = Configuración de planificación de reaprovisionamiento
 ServiceLevelPercent = Nivel de servicio (%%)
 ServiceLevelHelp = Mayor nivel de servicio = más stock de seguridad. 95%% es común para artículos importantes.
-DefaultOrderCost = Default Costo de pedido
+DefaultOrderCost = Costo de pedido predeterminado
 DefaultOrderCostHelp = Coste de realizar un pedido (administración, envío, recepción). Usado en cálculo EOQ.
-HoldingCostPercent = Costo de mantenimiento (%% of unit cost)
+HoldingCostPercent = Costo de mantenimiento (%% del costo unitario)
 HoldingCostPercentHelp = Coste anual de mantener una unidad en stock como porcentaje de su precio de coste.
-DefaultLeadTime = Default Lead Time (días)
+DefaultLeadTime = Plazo predeterminado (días)
 DefaultLeadTimeHelp = Se usa cuando no hay plazo de proveedor disponible para un producto
 AlertSettings = Umbrales de alerta
-StockoutRiskThreshold = Riesgo de rotura Score Threshold
+StockoutRiskThreshold = Umbral del score de riesgo de rotura
 StockoutRiskThresholdHelp = Los productos con puntuación de riesgo por debajo de este valor se marcan en riesgo
-SaveSettings = Save Configuración
-SettingsSaved = Configuración saved successfully
+SaveSettings = Guardar configuración
+SettingsSaved = Configuración guardada correctamente
 
 # Export
 ExportCSV = Exportar a CSV
@@ -210,3 +210,10 @@ ExportHeaderAgeDays = Antigüedad (días)
 ExportHeaderFormula = Fórmula
 
 planningintelModuleDescriptionLong = Módulo PlanningIntel: clasificación de inventario (ABC/XYZ), pronóstico de demanda (SMA, WMA, estacional), planificación de reaprovisionamiento (ROP, stock de seguridad, EOQ) y explosión de LdM. Análisis de solo lectura sobre datos del núcleo.
+ROPFormulaDisplay = ROP = (Demanda diaria media × Plazo) + Stock de seguridad
+SSFormulaDisplay = SS = Z × σ(diaria) × √(LT)
+EOQFormulaDisplay = EOQ = √(2 × D × S / H)
+EOQFormulaCannotCalculate = No es posible calcular EOQ con los datos actuales
+DeadStockFilterFormulaDisplay = Filtro: stock > 0 Y (sin movimientos O último movimiento > %s días)
+SlowStockFilterFormulaDisplay = Filtro: movimientos > 0 Y movimientos < %s en los últimos %s días
+StockoutRiskFormulaDisplay = Score de riesgo = Stock actual / (consumo diario medio x plazo en días)

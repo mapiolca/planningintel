@@ -76,17 +76,17 @@ if ($view == 'plan') {
     planningintelPrintFormulaCard(
         $langs->trans('ROPFormulaTitle'),
         $langs->trans('ROPFormulaDesc'),
-        'ROP = (Avg Daily Demand × Lead Time) + Safety Stock'
+        $langs->trans('ROPFormulaDisplay')
     );
     planningintelPrintFormulaCard(
         $langs->trans('SSFormulaTitle'),
         $langs->trans('SSFormulaDesc'),
-        'SS = Z × σ(daily) × √(LT)'
+        $langs->trans('SSFormulaDisplay')
     );
     planningintelPrintFormulaCard(
         $langs->trans('EOQFormulaTitle'),
         $langs->trans('EOQFormulaDesc'),
-        'EOQ = √(2 × D × S / H)'
+        $langs->trans('EOQFormulaDisplay')
     );
 
     // Config info
@@ -137,7 +137,7 @@ if ($view == 'plan') {
         print '<tr class="oddeven"><td>'.$langs->trans('OrderCost').'</td><td class="right">'.price($eoqData['order_cost']).'</td></tr>';
         print '<tr class="oddeven"><td>'.$langs->trans('HoldingCost').'</td><td class="right">'.price($eoqData['holding_cost']).' ('.$eoqData['holding_pct'].'%)</td></tr>';
         print '<tr class="oddeven"><td>'.$langs->trans('UnitPrice').'</td><td class="right">'.price($eoqData['unit_cost']).'</td></tr>';
-        print '<tr class="oddeven"><td>'.$langs->trans('ForecastFormula').'</td><td class="right"><code>'.$eoqData['formula'].'</code></td></tr>';
+        print '<tr class="oddeven"><td>'.$langs->trans('ForecastFormula').'</td><td class="right"><code>'.(strpos($eoqData['formula'], 'Cannot calculate:') === 0 ? $langs->trans('EOQFormulaCannotCalculate') : $eoqData['formula']).'</code></td></tr>';
         print '</table>';
     } else {
         // Bulk reorder plan

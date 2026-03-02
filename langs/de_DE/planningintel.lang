@@ -140,13 +140,13 @@ EnterDemandQty = Bedarfsmenge eingeben
 
 # Settings page
 PlanningIntelSettings = Bestandsintelligenz Einstellungen
-PlanningIntelSetup = Bestandsintelligenz Setup
+PlanningIntelSetup = Einrichtung Bestandsintelligenz
 DataSource = Datenquelle für Bedarf
 DataSourceHelp = Wählen Sie, ob der Bedarf aus Kundenaufträgen oder Rechnungen berechnet werden soll
 UseOrders = Kundenaufträge
 UseInvoices = Kundenrechnungen
 AnalysisPeriod = Analysezeitraum (Monate)
-AnalysisPeriodHelp = Number of Monate of historical data used in analyses
+AnalysisPeriodHelp = Anzahl der Monate historischer Daten für die Analysen
 ABCThresholds = ABC-Klassifizierungsschwellen
 ClassAPercent = Kumulierte Umsätze Klasse A %%
 ClassBPercent = Kumulierte Umsätze Klasse A+B %%
@@ -154,28 +154,28 @@ XYZThresholds = XYZ-Klassifizierungsschwellen
 ClassXThreshold = Klasse-X-CV-Schwelle (<=)
 ClassYThreshold = Klasse-Y-CV-Schwelle (<=)
 DeadSlowStock = Erkennung von Ladenhütern und Langsamdrehern
-DeadStockDays = Ladenhüter Threshold (Tage)
-DeadStockDaysHelp = Products with no movement in this many Tage are flagged as dead stock
+DeadStockDays = Ladenhüter-Schwelle (Tage)
+DeadStockDaysHelp = Produkte ohne Bewegung in dieser Anzahl Tage werden als Ladenhüter markiert
 SlowStockThreshold = Schwelle für langsame Lagerbewegung
 SlowStockThresholdHelp = Produkte mit weniger Bewegungen als dieser Wert im Zeitraum werden als langsam markiert
-SlowStockDays = Slow Stock Period (Tage)
-ForecastSettings = Prognose Einstellungen
-SMAMonths = SMA Period (Monate)
-WMAMonths = WMA Period (Monate)
-ReorderSettings = Nachschubplanung Einstellungen
+SlowStockDays = Zeitraum für langsamen Bestand (Tage)
+ForecastSettings = Prognoseeinstellungen
+SMAMonths = SMA-Periode (Monate)
+WMAMonths = WMA-Periode (Monate)
+ReorderSettings = Einstellungen zur Nachschubplanung
 ServiceLevelPercent = Servicegrad (%%)
 ServiceLevelHelp = Höherer Servicegrad = mehr Sicherheitsbestand. 95%% ist üblich für wichtige Artikel.
-DefaultOrderCost = Default Bestellkosten
+DefaultOrderCost = Standard-Bestellkosten
 DefaultOrderCostHelp = Kosten für eine Bestellung (Admin, Versand, Wareneingang). Verwendet in EOQ-Berechnung.
-HoldingCostPercent = Lagerhaltungskosten (%% of unit cost)
+HoldingCostPercent = Lagerhaltungskosten (%% der Stückkosten)
 HoldingCostPercentHelp = Jährliche Kosten für das Halten einer Einheit auf Lager als Prozentsatz des Einstandspreises.
-DefaultLeadTime = Default Lead Time (Tage)
+DefaultLeadTime = Standard-Lieferzeit (Tage)
 DefaultLeadTimeHelp = Wird verwendet, wenn für ein Produkt keine Lieferantenlieferzeit verfügbar ist
 AlertSettings = Alarmschwellen
-StockoutRiskThreshold = Fehlbestandsrisiko Score Threshold
+StockoutRiskThreshold = Schwellenwert für Fehlbestandsrisiko-Score
 StockoutRiskThresholdHelp = Produkte mit einem Risikowert unter diesem Wert werden als gefährdet markiert
-SaveSettings = Save Einstellungen
-SettingsSaved = Einstellungen saved successfully
+SaveSettings = Einstellungen speichern
+SettingsSaved = Einstellungen erfolgreich gespeichert
 
 # Export
 ExportCSV = Als CSV exportieren
@@ -210,3 +210,10 @@ ExportHeaderAgeDays = Alter (Tage)
 ExportHeaderFormula = Formel
 
 planningintelModuleDescriptionLong = PlanningIntel-Modul: Lagerklassifizierung (ABC/XYZ), Bedarfsprognose (SMA, WMA, saisonal), Nachschubplanung (ROP, Sicherheitsbestand, EOQ) und Stücklistenauflösung. Schreibgeschützte Analyse auf Kerndatenbasis.
+ROPFormulaDisplay = ROP = (Ø Tagesbedarf × Lieferzeit) + Sicherheitsbestand
+SSFormulaDisplay = SS = Z × σ(täglich) × √(LT)
+EOQFormulaDisplay = EOQ = √(2 × D × S / H)
+EOQFormulaCannotCalculate = EOQ kann mit den aktuellen Daten nicht berechnet werden
+DeadStockFilterFormulaDisplay = Filter: Bestand > 0 UND (keine Bewegungen ODER letzte Bewegung > %s Tage)
+SlowStockFilterFormulaDisplay = Filter: Bewegungen > 0 UND Bewegungen < %s in den letzten %s Tagen
+StockoutRiskFormulaDisplay = Risiko-Score = Aktueller Bestand / (Ø Tagesverbrauch x Lieferzeit in Tagen)
