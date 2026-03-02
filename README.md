@@ -34,8 +34,7 @@ Intelligence des stocks
 - Dolibarr 14.0+
 - PHP 7.0+
 - MySQL 5.7+ ou MariaDB 10.3+
-
-## Modules Produits et Stock activés
+- Modules Produits et Stock activés
 
 ## Installation
 
@@ -128,4 +127,5 @@ This module is licensed under the GNU General Public License v3.0 or later. See 
 ## Author
 
 SiliconBlaze
+
 
