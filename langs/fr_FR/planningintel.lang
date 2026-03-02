@@ -196,3 +196,17 @@ BackToList = Retour à la liste
 ProductId = ID produit
 Visual = Visuel
 Days = jours
+MonthsShort = mois
+NotAvailable = N/D
+ExplodeBOM = Exploser la nomenclature
+NoBOMFound = Aucune nomenclature trouvée pour ce produit, ou il n'a aucun composant.
+BOMFormulaDisplay = Qté requise = Demande x Qté nomenclature / Efficacité
+ExportHeaderProductRef = Réf produit
+ExportHeaderProductLabel = Libellé produit
+ExportHeaderCumulativePercent = %% cumulé
+ExportHeaderCombined = Combiné
+ExportHeaderMovementCount = Nombre de mouvements
+ExportHeaderAgeDays = Âge (jours)
+ExportHeaderFormula = Formule
+
+planningintelModuleDescriptionLong = Module PlanningIntel : classification des stocks (ABC/XYZ), prévision de la demande (SMA, WMA, saisonnier), planification de réapprovisionnement (ROP, stock de sécurité, EOQ) et explosion de nomenclature. Analyse en lecture seule sur les données cœur.

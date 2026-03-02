@@ -196,3 +196,18 @@ BackToList = Volver a la lista
 ProductId = ID de producto
 Visual = Visual
 Days = días
+
+MonthsShort = meses
+NotAvailable = N/D
+ExplodeBOM = Explotar LdM
+NoBOMFound = No se encontró LdM para este producto, o no tiene componentes.
+BOMFormulaDisplay = Cant. requerida = Demanda x Cant. LdM / Eficiencia
+ExportHeaderProductRef = Ref producto
+ExportHeaderProductLabel = Etiqueta producto
+ExportHeaderCumulativePercent = %% acumulado
+ExportHeaderCombined = Combinado
+ExportHeaderMovementCount = Nº movimientos
+ExportHeaderAgeDays = Edad (días)
+ExportHeaderFormula = Fórmula
+
+planningintelModuleDescriptionLong = Módulo PlanningIntel: clasificación de inventario (ABC/XYZ), previsión de demanda (SMA, WMA, estacional), planificación de reaprovisionamiento (ROP, stock de seguridad, EOQ) y explosión de LdM. Análisis en solo lectura sobre datos del núcleo.

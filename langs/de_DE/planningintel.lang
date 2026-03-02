@@ -196,3 +196,18 @@ BackToList = Zurück zur Liste
 ProductId = Produkt-ID
 Visual = Visualisierung
 Days = Tage
+
+MonthsShort = Monate
+NotAvailable = k.A.
+ExplodeBOM = Stückliste auflösen
+NoBOMFound = Keine Stückliste für dieses Produkt gefunden oder keine Komponenten vorhanden.
+BOMFormulaDisplay = Benötigte Menge = Bedarf x Stücklistenmenge / Effizienz
+ExportHeaderProductRef = Artikel-Ref
+ExportHeaderProductLabel = Artikelbezeichnung
+ExportHeaderCumulativePercent = Kumuliert %%
+ExportHeaderCombined = Kombiniert
+ExportHeaderMovementCount = Anzahl Bewegungen
+ExportHeaderAgeDays = Alter (Tage)
+ExportHeaderFormula = Formel
+
+planningintelModuleDescriptionLong = PlanningIntel-Modul: Lagerklassifizierung (ABC/XYZ), Bedarfsprognose (SMA, WMA, saisonal), Nachschubplanung (ROP, Sicherheitsbestand, EOQ) und Stücklistenauflösung. Schreibgeschützte Analyse auf Kerndatenbasis.

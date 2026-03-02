@@ -68,7 +68,7 @@ $wmaPeriods = (int) $config->get('WMA_MONTHS', 3);
 
 print '<div class="opacitymedium small" style="margin-bottom: 10px;">';
 print $langs->trans('ConfiguredDataSource', ucfirst($dataSource));
-print ' | SMA: '.$smaPeriods.' months | WMA: '.$wmaPeriods.' months';
+print ' | SMA: '.$smaPeriods.' '.$langs->trans('MonthsShort').' | WMA: '.$wmaPeriods.' '.$langs->trans('MonthsShort');
 print '</div>';
 
 // ===================== Product Detail View =====================

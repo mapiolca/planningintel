@@ -206,7 +206,7 @@ if ($view == 'bom') {
     planningintelPrintFormulaCard(
         $langs->trans('BOMExplosionFormulaTitle'),
         $langs->trans('BOMExplosionFormulaDesc'),
-        'Required Qty = Demand × BOM Qty / Efficiency'
+        $langs->trans('BOMFormulaDisplay')
     );
 
     // Product selector form
@@ -221,7 +221,7 @@ if ($view == 'bom') {
     print '</td>';
     print '<td>'.$langs->trans('EnterDemandQty').'</td>';
     print '<td><input type="number" name="demand_qty" value="'.$demandQty.'" min="1" class="flat width75"></td>';
-    print '<td><input type="submit" class="button" value="Explode BOM"></td>';
+    print '<td><input type="submit" class="button" value="'.$langs->trans('ExplodeBOM').'"></td>';
     print '</tr>';
     print '</table>';
     print '</form>';
@@ -236,7 +236,7 @@ if ($view == 'bom') {
         $bomTree = $reorder->getBOMExplosion($productId, $demandQty);
 
         if (empty($bomTree)) {
-            print '<div class="opacitymedium">No BOM found for this product, or it has no components.</div>';
+            print '<div class="opacitymedium">'.$langs->trans('NoBOMFound').'</div>';
         } else {
             $flatList = $reorder->flattenBOMTree($bomTree);
 

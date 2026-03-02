@@ -196,3 +196,18 @@ BackToList = Torna all'elenco
 ProductId = ID prodotto
 Visual = Visuale
 Days = giorni
+
+MonthsShort = mesi
+NotAvailable = N/D
+ExplodeBOM = Esplodi D.B.
+NoBOMFound = Nessuna distinta base trovata per questo prodotto oppure nessun componente presente.
+BOMFormulaDisplay = Qta richiesta = Domanda x Qta distinta base / Efficienza
+ExportHeaderProductRef = Rif prodotto
+ExportHeaderProductLabel = Etichetta prodotto
+ExportHeaderCumulativePercent = %% cumulata
+ExportHeaderCombined = Combinato
+ExportHeaderMovementCount = Numero movimenti
+ExportHeaderAgeDays = Età (giorni)
+ExportHeaderFormula = Formula
+
+planningintelModuleDescriptionLong = Modulo PlanningIntel: classificazione inventario (ABC/XYZ), previsione domanda (SMA, WMA, stagionale), pianificazione riordino (ROP, scorta di sicurezza, EOQ) ed esplosione distinta base. Analisi in sola lettura sui dati core.

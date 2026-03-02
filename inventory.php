@@ -385,7 +385,7 @@ if ($view == 'aging') {
             print '<td>'.$row['warehouse_ref'].'</td>';
             print '<td class="right">'.$row['current_qty'].'</td>';
             print '<td class="center">'.($row['last_inbound_date'] ? dol_print_date(strtotime($row['last_inbound_date']), 'day') : '-').'</td>';
-            print '<td class="right" style="'.$ageColor.'">'.($row['age_days'] !== null ? $row['age_days'] : 'N/A').'</td>';
+            print '<td class="right" style="'.$ageColor.'">'.($row['age_days'] !== null ? $row['age_days'] : $langs->trans('NotAvailable')).'</td>';
             print '</tr>';
         }
         print '</table>';

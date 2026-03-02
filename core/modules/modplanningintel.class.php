@@ -45,10 +45,8 @@ class modplanningintel extends DolibarrModules
         $this->family = 'products';
         $this->module_position = 90;
         $this->name = preg_replace('/^mod/i', '', get_class($this));
-        $this->description = 'Stock Intelligence - ABC/XYZ analysis, demand forecasting, reorder planning';
-        $this->descriptionlong = 'Provides inventory classification (ABC/XYZ), demand forecasting (SMA, WMA, seasonal), '
-            .'reorder planning (ROP, safety stock, EOQ), and BOM explosion. All formulas are transparent and explainable. '
-            .'Read-only access to core tables - no destructive changes. Requires MySQL or MariaDB (PostgreSQL not supported).';
+        $this->description = 'planningintelModuleDescription';
+        $this->descriptionlong = 'planningintelModuleDescriptionLong';
         $this->editor_name = 'SiliconBlaze';
         $this->editor_url = 'https://siliconblaze.com';
         $this->version = '1.0.0';

@@ -196,3 +196,17 @@ BackToList = Back to list
 ProductId = Product ID
 Visual = Visual
 Days = days
+MonthsShort = months
+NotAvailable = N/A
+ExplodeBOM = Explode BOM
+NoBOMFound = No BOM found for this product, or it has no components.
+BOMFormulaDisplay = Required Qty = Demand x BOM Qty / Efficiency
+ExportHeaderProductRef = Product Ref
+ExportHeaderProductLabel = Product Label
+ExportHeaderCumulativePercent = Cumulative %%
+ExportHeaderCombined = Combined
+ExportHeaderMovementCount = Movement Count
+ExportHeaderAgeDays = Age Days
+ExportHeaderFormula = Formula
+
+planningintelModuleDescriptionLong = PlanningIntel module: inventory classification (ABC/XYZ), demand forecasting (SMA, WMA, seasonal), reorder planning (ROP, safety stock, EOQ) and BOM explosion. Read-only analysis over core data.
