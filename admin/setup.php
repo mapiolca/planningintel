@@ -245,7 +245,7 @@ print '<td>'.$langs->trans('DeadStockDays').'<br><span class="opacitymedium smal
 print '<td class="center">&nbsp;</td>';
 print '<td class="right">';
 $val = isset($allConfig['DEAD_STOCK_DAYS']) ? $allConfig['DEAD_STOCK_DAYS'] : 90;
-print '<input type="number" name="DEAD_STOCK_DAYS" value="'.$val.'" min="7" max="365" class="flat width75"> days';
+print '<input type="number" name="DEAD_STOCK_DAYS" value="'.$val.'" min="7" max="365" class="flat width75"> '.$langs->trans('Days');
 print '</td></tr>';
 
 print '<tr class="oddeven">';
@@ -261,7 +261,7 @@ print '<td>'.$langs->trans('SlowStockDays').'</td>';
 print '<td class="center">&nbsp;</td>';
 print '<td class="right">';
 $val = isset($allConfig['SLOW_STOCK_DAYS']) ? $allConfig['SLOW_STOCK_DAYS'] : 90;
-print '<input type="number" name="SLOW_STOCK_DAYS" value="'.$val.'" min="7" max="365" class="flat width75"> days';
+print '<input type="number" name="SLOW_STOCK_DAYS" value="'.$val.'" min="7" max="365" class="flat width75"> '.$langs->trans('Days');
 print '</td></tr>';
 print '</table><br>';
 
@@ -331,7 +331,7 @@ print '<td>'.$langs->trans('DefaultLeadTime').'<br><span class="opacitymedium sm
 print '<td class="center">&nbsp;</td>';
 print '<td class="right">';
 $val = isset($allConfig['DEFAULT_LEAD_TIME']) ? $allConfig['DEFAULT_LEAD_TIME'] : 14;
-print '<input type="number" name="DEFAULT_LEAD_TIME" value="'.$val.'" min="1" max="365" class="flat width75"> days';
+print '<input type="number" name="DEFAULT_LEAD_TIME" value="'.$val.'" min="1" max="365" class="flat width75"> '.$langs->trans('Days');
 print '</td></tr>';
 print '</table><br>';
 

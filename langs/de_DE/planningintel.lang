@@ -1,0 +1,219 @@
+# Stock Intelligence Module
+# Copyright (C) 2026 SiliconBlaze
+# Sprachdatei: de_DE
+
+# Module info
+Module95100Name = Bestandsintelligenz
+Module95100Desc = ABC/XYZ-Analyse, Bedarfsprognose, Nachschubplanung mit erklärbaren Formeln
+planningintelModuleDescription = Bestandsintelligenz - ABC/XYZ-Analyse, Bedarfsprognose, Nachschubplanung
+
+# Menu
+PlanningIntel = Bestandsintelligenz
+Dashboard = Übersicht
+InventoryIntelligence = Lagerintelligenz
+DemandForecasting = Bedarfsprognose
+ReorderPlanning = Nachschubplanung
+Settings = Einstellungen
+
+# Dashboard
+PlanningIntelDashboard = Bestandsintelligenz Dashboard
+StockoutRiskCount = Produkte mit Fehlbestandsrisiko
+OverstockValue = Überbestandswert
+DeadStockCount = Ladenhüter
+DeadStockValue = Wert der Ladenhüter
+ForecastAccuracy = Prognose Genauigkeit (MAPE)
+DemandTrend = Nachfragetrend (12 Monate)
+ABCDistribution = ABC-Verteilung
+StockHealth = Übersicht Lagerzustand
+Healthy = Gesund
+TotalDemand = Gesamtnachfrage
+
+# Inventory Intelligence
+ABCAnalysis = ABC-Analyse
+XYZAnalysis = XYZ-Analyse
+ABCXYZMatrix = ABC-XYZ-Matrix
+DeadStock = Ladenhüter
+SlowStock = Langsam drehender Bestand
+StockAging = Bestandsalterung
+StockoutRisk = Fehlbestandsrisiko
+TotalRevenue = Gesamtumsatz
+CumulativePercent = Kumuliert %%
+ABCClass = ABC-Klasse
+XYZClass = XYZ-Klasse
+CombinedClass = Kombinierte Klasse
+MeanQty = Ø Monatsmenge
+StdDev = Standardabweichung
+CoefficientOfVariation = Variationskoeff. (CV)
+CurrentStock = Aktueller Bestand
+CostPrice = Einstandspreis
+StockValue = Bestandswert
+LastMovement = Letzte Bewegung
+MovementCount = Bewegungen
+LastInbound = Letzter Zugang
+AgeDays = Alter (Tage)
+AvgDailyConsumption = Ø Tagesverbrauch
+LeadTimeDays = Lieferzeit (Tage)
+RiskScore = Risikowert
+AtRisk = Gefährdet
+FormulaExplanation = Formelerklärung
+Rank = Rang
+Product = Produkt
+Warehouse = Lager
+Qty = Menge
+
+# ABC/XYZ formula descriptions
+ABCFormulaTitle = ABC-Klassifizierung
+ABCFormulaDesc = Produkte nach kumuliertem Umsatzbeitrag sortiert. Klasse A = oberste %s%% Umsatz | Klasse B = nächste %s%% | Klasse C = verbleibende %s%%
+XYZFormulaTitle = XYZ-Klassifizierung
+XYZFormulaDesc = Produkte nach Nachfragevariabilität (Variationskoeffizient) klassifiziert. X: CV <= %s (stabil) | Y: CV <= %s (variabel) | Z: CV > %s (sprunghaft)
+ABCXYZFormulaTitle = ABC-XYZ Kombiniert Matrix
+ABCXYZFormulaDesc = Kombiniert Umsatzrelevanz (ABC) mit Nachfragevorhersagbarkeit (XYZ). AX = hoher stabiler Wert, CZ = niedriger sprunghafter Wert
+DeadStockFormulaTitle = Ladenhüter Detection
+DeadStockFormulaDesc = Products with zero stock movements in the last %s Tage despite having stock on hand
+SlowStockFormulaTitle = Langsam drehender Bestand
+SlowStockFormulaDesc = Products with fewer than %s stock movements in the last %s Tage
+StockAgingFormulaTitle = Bestandsalterung Analysis
+StockAgingFormulaDesc = Tage seit der letzten Zugangsbewegung (Wareneingang) je Produkt und Lager. Älterer Bestand = höhere Lagerkosten
+StockoutRiskFormulaTitle = Fehlbestandsrisiko Score
+StockoutRiskFormulaDesc = Risikowert = Aktueller Bestand / (Ø Tagesverbrauch x Lead Time). Score below %s = at risk of stockout
+
+# Forecasting
+SimpleMovingAverage = Einfacher gleitender Durchschnitt (SMA)
+WeightedMovingAverage = Gewichteter gleitender Durchschnitt (WMA)
+SeasonalIndex = Saisonindex
+ForecastResult = Prognoseergebnis
+ForecastInputs = Verwendete Eingaben
+ForecastFormula = Formel
+Periods = Perioden
+Weights = Gewichte
+MonthlyDemandHistory = Monatliche Nachfragehistorie
+ForecastVsActual = Prognose vs Ist
+Actual = Ist
+Forecast = Prognose
+Method = Methode
+Accuracy = Genauigkeit
+LastMonthActual = Last Monat Ist
+ForecastNextMonth = Prognose (Next Monat)
+SMAFormulaTitle = Einfacher gleitender Durchschnitt
+SMAFormulaDesc = SMA = Sum of last %s Monate demand / %s. Equal weight to all periods.
+WMAFormulaTitle = Gewichteter gleitender Durchschnitt
+WMAFormulaDesc = WMA = Sum(qty x weight) / Sum(weights). Recent Monate weighted more heavily (e.g. 3-month: weights 3,2,1).
+SeasonalFormulaTitle = Saisonindex
+SeasonalFormulaDesc = Saisonindex = Monat Average / Overall Monatly Average. Index > 1 means above-average demand for that month.
+MAPEFormulaDesc = MAPE = mittlerer absoluter prozentualer Fehler = (1/n) x Summe(|Ist - Prognose| / Ist) x 100. Niedriger ist besser.
+Month = Monat
+Index = Index
+NoForecastData = Insufficient historical data for forecasting. Need at least %s Monate of order/invoice history.
+
+# Reorder
+ReorderPlan = Nachschubplan
+ReorderPoint = Meldebestand (ROP)
+SafetyStock = Sicherheitsbestand
+EOQ = Optimale Bestellmenge (EOQ)
+BOMExplosion = Stücklistenauflösung
+NeedsReorder = Nachbestellen nötig
+SuggestedQty = Vorgeschlagene Bestellmenge
+SupplierRef = Lieferant
+SupplierPrice = Lieferant Price
+UnitPrice = Stückpreis
+ServiceLevel = Servicegrad
+OrderCost = Bestellkosten (S)
+HoldingCost = Lagerhaltungskosten (H)
+AnnualDemand = Jahresbedarf (D)
+RequiredQty = Benötigte Menge
+Shortage = Fehlmenge
+BOMPath = Stücklistenpfad
+Depth = Tiefe
+MOQ = Mindestbestellmenge
+Yes = Ja
+No = Nein
+ROPFormulaTitle = Meldebestand (ROP)
+ROPFormulaDesc = ROP = (Avg Daily Demand x Lead Time) + Sicherheitsbestand. Reorder when current stock falls to this level.
+SSFormulaTitle = Sicherheitsbestand
+SSFormulaDesc = Sicherheitsbestand = Z x Sigma(daily demand) x Sqrt(Lead Time). Z-score from service level: 90%%=1.28, 95%%=1.65, 99%%=2.33
+EOQFormulaTitle = Optimale Bestellmenge
+EOQFormulaDesc = EOQ = Wurzel(2 x D x S / H). D = Jahresbedarf, S = Kosten pro Bestellung, H = jährliche Lagerkosten pro Einheit.
+BOMExplosionFormulaTitle = Stücklistenauflösung
+BOMExplosionFormulaDesc = Verteilt den Bedarf eines Endprodukts über die Stückliste, um den Rohmaterialbedarf zu berechnen.
+SelectProduct = Produkt auswählen, um die Stücklistenauflösung zu sehen
+EnterDemandQty = Bedarfsmenge eingeben
+
+# Settings page
+PlanningIntelSettings = Bestandsintelligenz Einstellungen
+PlanningIntelSetup = Einrichtung Bestandsintelligenz
+DataSource = Datenquelle für Bedarf
+DataSourceHelp = Wählen Sie, ob der Bedarf aus Kundenaufträgen oder Rechnungen berechnet werden soll
+UseOrders = Kundenaufträge
+UseInvoices = Kundenrechnungen
+AnalysisPeriod = Analysezeitraum (Monate)
+AnalysisPeriodHelp = Anzahl der Monate historischer Daten für die Analysen
+ABCThresholds = ABC-Klassifizierungsschwellen
+ClassAPercent = Kumulierte Umsätze Klasse A %%
+ClassBPercent = Kumulierte Umsätze Klasse A+B %%
+XYZThresholds = XYZ-Klassifizierungsschwellen
+ClassXThreshold = Klasse-X-CV-Schwelle (<=)
+ClassYThreshold = Klasse-Y-CV-Schwelle (<=)
+DeadSlowStock = Erkennung von Ladenhütern und Langsamdrehern
+DeadStockDays = Ladenhüter-Schwelle (Tage)
+DeadStockDaysHelp = Produkte ohne Bewegung in dieser Anzahl Tage werden als Ladenhüter markiert
+SlowStockThreshold = Schwelle für langsame Lagerbewegung
+SlowStockThresholdHelp = Produkte mit weniger Bewegungen als dieser Wert im Zeitraum werden als langsam markiert
+SlowStockDays = Zeitraum für langsamen Bestand (Tage)
+ForecastSettings = Prognoseeinstellungen
+SMAMonths = SMA-Periode (Monate)
+WMAMonths = WMA-Periode (Monate)
+ReorderSettings = Einstellungen zur Nachschubplanung
+ServiceLevelPercent = Servicegrad (%%)
+ServiceLevelHelp = Höherer Servicegrad = mehr Sicherheitsbestand. 95%% ist üblich für wichtige Artikel.
+DefaultOrderCost = Standard-Bestellkosten
+DefaultOrderCostHelp = Kosten für eine Bestellung (Admin, Versand, Wareneingang). Verwendet in EOQ-Berechnung.
+HoldingCostPercent = Lagerhaltungskosten (%% der Stückkosten)
+HoldingCostPercentHelp = Jährliche Kosten für das Halten einer Einheit auf Lager als Prozentsatz des Einstandspreises.
+DefaultLeadTime = Standard-Lieferzeit (Tage)
+DefaultLeadTimeHelp = Wird verwendet, wenn für ein Produkt keine Lieferantenlieferzeit verfügbar ist
+AlertSettings = Alarmschwellen
+StockoutRiskThreshold = Schwellenwert für Fehlbestandsrisiko-Score
+StockoutRiskThresholdHelp = Produkte mit einem Risikowert unter diesem Wert werden als gefährdet markiert
+SaveSettings = Einstellungen speichern
+SettingsSaved = Einstellungen erfolgreich gespeichert
+
+# Export
+ExportCSV = Als CSV exportieren
+ExportData = Daten exportieren
+
+# Common
+BackToModuleList = Zurück zur Modulliste
+NoDataAvailable = Keine Daten für diese Analyse verfügbar. Bitte Lagerbewegungen und Auftrags-/Rechnungshistorie prüfen.
+ConfiguredDataSource = Datenquelle: %s
+ConfiguredPeriod = Analysezeitraum: %s Monate
+ProductsAnalyzed = Analysierte Produkte: %s
+ShowFormula = Formel anzeigen
+HideFormula = Formel ausblenden
+Ref = Ref
+Label = Bezeichnung
+
+BackToList = Zurück zur Liste
+ProductId = Produkt-ID
+Visual = Visualisierung
+Days = Tage
+MonthsShort = Monate
+NotAvailable = k.A.
+ExplodeBOM = Stückliste auflösen
+NoBOMFound = Keine Stückliste für dieses Produkt gefunden oder keine Komponenten vorhanden.
+BOMFormulaDisplay = Benötigte Menge = Bedarf x Stücklistenmenge / Effizienz
+ExportHeaderProductRef = Artikel-Ref
+ExportHeaderProductLabel = Artikelbezeichnung
+ExportHeaderCumulativePercent = Kumuliert %%
+ExportHeaderCombined = Kombiniert
+ExportHeaderMovementCount = Anzahl Bewegungen
+ExportHeaderAgeDays = Alter (Tage)
+ExportHeaderFormula = Formel
+
+planningintelModuleDescriptionLong = PlanningIntel-Modul: Lagerklassifizierung (ABC/XYZ), Bedarfsprognose (SMA, WMA, saisonal), Nachschubplanung (ROP, Sicherheitsbestand, EOQ) und Stücklistenauflösung. Schreibgeschützte Analyse auf Kerndatenbasis.
+ROPFormulaDisplay = ROP = (Ø Tagesbedarf × Lieferzeit) + Sicherheitsbestand
+SSFormulaDisplay = SS = Z × σ(täglich) × √(LT)
+EOQFormulaDisplay = EOQ = √(2 × D × S / H)
+EOQFormulaCannotCalculate = EOQ kann mit den aktuellen Daten nicht berechnet werden
+DeadStockFilterFormulaDisplay = Filter: Bestand > 0 UND (keine Bewegungen ODER letzte Bewegung > %s Tage)
+SlowStockFilterFormulaDisplay = Filter: Bewegungen > 0 UND Bewegungen < %s in den letzten %s Tagen
+StockoutRiskFormulaDisplay = Risiko-Score = Aktueller Bestand / (Ø Tagesverbrauch x Lieferzeit in Tagen)

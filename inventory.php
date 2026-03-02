@@ -260,7 +260,7 @@ if ($view == 'dead') {
     planningintelPrintFormulaCard(
         $langs->trans('DeadStockFormulaTitle'),
         $langs->trans('DeadStockFormulaDesc', $deadDays),
-        'Filter: stock > 0 AND (no movements OR last movement > '.$deadDays.' days ago)'
+        $langs->trans('DeadStockFilterFormulaDisplay', $deadDays)
     );
 
     $data = $intel->getDeadStock();
@@ -310,7 +310,7 @@ if ($view == 'slow') {
     planningintelPrintFormulaCard(
         $langs->trans('SlowStockFormulaTitle'),
         $langs->trans('SlowStockFormulaDesc', $slowThreshold, $slowDays),
-        'Filter: movements > 0 AND movements < '.$slowThreshold.' in last '.$slowDays.' days'
+        $langs->trans('SlowStockFilterFormulaDisplay', $slowThreshold, $slowDays)
     );
 
     $data = $intel->getSlowStock();
@@ -385,7 +385,7 @@ if ($view == 'aging') {
             print '<td>'.$row['warehouse_ref'].'</td>';
             print '<td class="right">'.$row['current_qty'].'</td>';
             print '<td class="center">'.($row['last_inbound_date'] ? dol_print_date(strtotime($row['last_inbound_date']), 'day') : '-').'</td>';
-            print '<td class="right" style="'.$ageColor.'">'.($row['age_days'] !== null ? $row['age_days'] : 'N/A').'</td>';
+            print '<td class="right" style="'.$ageColor.'">'.($row['age_days'] !== null ? $row['age_days'] : $langs->trans('NotAvailable')).'</td>';
             print '</tr>';
         }
         print '</table>';
@@ -399,7 +399,7 @@ if ($view == 'stockout') {
     planningintelPrintFormulaCard(
         $langs->trans('StockoutRiskFormulaTitle'),
         $langs->trans('StockoutRiskFormulaDesc', $riskThreshold),
-        'Risk Score = Current Stock / (Avg Daily Consumption x Lead Time Days)'
+        $langs->trans('StockoutRiskFormulaDisplay')
     );
 
     $data = $intel->getStockoutRisk();

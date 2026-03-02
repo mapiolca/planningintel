@@ -76,17 +76,17 @@ if ($view == 'plan') {
     planningintelPrintFormulaCard(
         $langs->trans('ROPFormulaTitle'),
         $langs->trans('ROPFormulaDesc'),
-        'ROP = (Avg Daily Demand × Lead Time) + Safety Stock'
+        $langs->trans('ROPFormulaDisplay')
     );
     planningintelPrintFormulaCard(
         $langs->trans('SSFormulaTitle'),
         $langs->trans('SSFormulaDesc'),
-        'SS = Z × σ(daily) × √(LT)'
+        $langs->trans('SSFormulaDisplay')
     );
     planningintelPrintFormulaCard(
         $langs->trans('EOQFormulaTitle'),
         $langs->trans('EOQFormulaDesc'),
-        'EOQ = √(2 × D × S / H)'
+        $langs->trans('EOQFormulaDisplay')
     );
 
     // Config info
@@ -94,7 +94,7 @@ if ($view == 'plan') {
     $leadTime = (int) $config->get('DEFAULT_LEAD_TIME', 14);
     print '<div class="opacitymedium small" style="margin-bottom: 10px;">';
     print $langs->trans('ServiceLevel').': '.$serviceLevel.'%';
-    print ' | '.$langs->trans('DefaultLeadTime').': '.$leadTime.' days';
+    print ' | '.$langs->trans('DefaultLeadTime').': '.$leadTime.' '.$langs->trans('Days');
     print ' | '.$langs->trans('OrderCost').': '.price((float) $config->get('DEFAULT_ORDER_COST', 50));
     print ' | '.$langs->trans('HoldingCost').': '.$config->get('HOLDING_COST_PERCENT', 25).'%';
     print '</div>';
@@ -105,7 +105,7 @@ if ($view == 'plan') {
         $product = new Product($db);
         $product->fetch($productId);
 
-        print '<a href="'.$_SERVER['PHP_SELF'].'?view=plan" class="butAction" style="margin-bottom: 15px;">&laquo; Back to list</a><br><br>';
+        print '<a href="'.$_SERVER['PHP_SELF'].'?view=plan" class="butAction" style="margin-bottom: 15px;">&laquo; '.$langs->trans('BackToList').'</a><br><br>';
         print '<h3>'.$product->ref.' - '.$product->label.'</h3>';
 
         $ropData = $reorder->getReorderPoint($productId);
@@ -117,7 +117,7 @@ if ($view == 'plan') {
         print '<tr class="oddeven"><td>'.$langs->trans('ReorderPoint').'</td><td class="right"><strong style="color: #4e73df;">'.$ropData['rop'].'</strong></td></tr>';
         print '<tr class="oddeven"><td>'.$langs->trans('SafetyStock').'</td><td class="right">'.$ropData['safety_stock'].'</td></tr>';
         print '<tr class="oddeven"><td>'.$langs->trans('AvgDailyConsumption').'</td><td class="right">'.$ropData['avg_daily'].'</td></tr>';
-        print '<tr class="oddeven"><td>'.$langs->trans('LeadTimeDays').'</td><td class="right">'.$ropData['lead_time'].' days</td></tr>';
+        print '<tr class="oddeven"><td>'.$langs->trans('LeadTimeDays').'</td><td class="right">'.$ropData['lead_time'].' '.$langs->trans('Days').'</td></tr>';
         print '<tr class="oddeven"><td>'.$langs->trans('ServiceLevel').'</td><td class="right">'.$ropData['service_level'].'%</td></tr>';
         print '<tr class="oddeven"><td>'.$langs->trans('NeedsReorder').'</td><td class="right">';
         if ($ropData['needs_reorder']) {
@@ -137,7 +137,7 @@ if ($view == 'plan') {
         print '<tr class="oddeven"><td>'.$langs->trans('OrderCost').'</td><td class="right">'.price($eoqData['order_cost']).'</td></tr>';
         print '<tr class="oddeven"><td>'.$langs->trans('HoldingCost').'</td><td class="right">'.price($eoqData['holding_cost']).' ('.$eoqData['holding_pct'].'%)</td></tr>';
         print '<tr class="oddeven"><td>'.$langs->trans('UnitPrice').'</td><td class="right">'.price($eoqData['unit_cost']).'</td></tr>';
-        print '<tr class="oddeven"><td>'.$langs->trans('ForecastFormula').'</td><td class="right"><code>'.$eoqData['formula'].'</code></td></tr>';
+        print '<tr class="oddeven"><td>'.$langs->trans('ForecastFormula').'</td><td class="right"><code>'.(strpos($eoqData['formula'], 'Cannot calculate:') === 0 ? $langs->trans('EOQFormulaCannotCalculate') : $eoqData['formula']).'</code></td></tr>';
         print '</table>';
     } else {
         // Bulk reorder plan
@@ -206,7 +206,7 @@ if ($view == 'bom') {
     planningintelPrintFormulaCard(
         $langs->trans('BOMExplosionFormulaTitle'),
         $langs->trans('BOMExplosionFormulaDesc'),
-        'Required Qty = Demand × BOM Qty / Efficiency'
+        $langs->trans('BOMFormulaDisplay')
     );
 
     // Product selector form
@@ -217,11 +217,11 @@ if ($view == 'bom') {
     print '<td>'.$langs->trans('SelectProduct').'</td>';
     print '<td>';
     // Simple product selector via select2 or product ref input
-    print '<input type="number" name="product_id" value="'.($productId > 0 ? $productId : '').'" placeholder="Product ID" class="flat width100">';
+    print '<input type="number" name="product_id" value="'.($productId > 0 ? $productId : '').'" placeholder="'.$langs->trans('ProductId').'" class="flat width100">';
     print '</td>';
     print '<td>'.$langs->trans('EnterDemandQty').'</td>';
     print '<td><input type="number" name="demand_qty" value="'.$demandQty.'" min="1" class="flat width75"></td>';
-    print '<td><input type="submit" class="button" value="Explode BOM"></td>';
+    print '<td><input type="submit" class="button" value="'.$langs->trans('ExplodeBOM').'"></td>';
     print '</tr>';
     print '</table>';
     print '</form>';
@@ -236,7 +236,7 @@ if ($view == 'bom') {
         $bomTree = $reorder->getBOMExplosion($productId, $demandQty);
 
         if (empty($bomTree)) {
-            print '<div class="opacitymedium">No BOM found for this product, or it has no components.</div>';
+            print '<div class="opacitymedium">'.$langs->trans('NoBOMFound').'</div>';
         } else {
             $flatList = $reorder->flattenBOMTree($bomTree);
 
