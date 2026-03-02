@@ -94,7 +94,7 @@ if ($view == 'plan') {
     $leadTime = (int) $config->get('DEFAULT_LEAD_TIME', 14);
     print '<div class="opacitymedium small" style="margin-bottom: 10px;">';
     print $langs->trans('ServiceLevel').': '.$serviceLevel.'%';
-    print ' | '.$langs->trans('DefaultLeadTime').': '.$leadTime.' days';
+    print ' | '.$langs->trans('DefaultLeadTime').': '.$leadTime.' '.$langs->trans('Days');
     print ' | '.$langs->trans('OrderCost').': '.price((float) $config->get('DEFAULT_ORDER_COST', 50));
     print ' | '.$langs->trans('HoldingCost').': '.$config->get('HOLDING_COST_PERCENT', 25).'%';
     print '</div>';
@@ -105,7 +105,7 @@ if ($view == 'plan') {
         $product = new Product($db);
         $product->fetch($productId);
 
-        print '<a href="'.$_SERVER['PHP_SELF'].'?view=plan" class="butAction" style="margin-bottom: 15px;">&laquo; Back to list</a><br><br>';
+        print '<a href="'.$_SERVER['PHP_SELF'].'?view=plan" class="butAction" style="margin-bottom: 15px;">&laquo; '.$langs->trans('BackToList').'</a><br><br>';
         print '<h3>'.$product->ref.' - '.$product->label.'</h3>';
 
         $ropData = $reorder->getReorderPoint($productId);
@@ -117,7 +117,7 @@ if ($view == 'plan') {
         print '<tr class="oddeven"><td>'.$langs->trans('ReorderPoint').'</td><td class="right"><strong style="color: #4e73df;">'.$ropData['rop'].'</strong></td></tr>';
         print '<tr class="oddeven"><td>'.$langs->trans('SafetyStock').'</td><td class="right">'.$ropData['safety_stock'].'</td></tr>';
         print '<tr class="oddeven"><td>'.$langs->trans('AvgDailyConsumption').'</td><td class="right">'.$ropData['avg_daily'].'</td></tr>';
-        print '<tr class="oddeven"><td>'.$langs->trans('LeadTimeDays').'</td><td class="right">'.$ropData['lead_time'].' days</td></tr>';
+        print '<tr class="oddeven"><td>'.$langs->trans('LeadTimeDays').'</td><td class="right">'.$ropData['lead_time'].' '.$langs->trans('Days').'</td></tr>';
         print '<tr class="oddeven"><td>'.$langs->trans('ServiceLevel').'</td><td class="right">'.$ropData['service_level'].'%</td></tr>';
         print '<tr class="oddeven"><td>'.$langs->trans('NeedsReorder').'</td><td class="right">';
         if ($ropData['needs_reorder']) {
@@ -217,7 +217,7 @@ if ($view == 'bom') {
     print '<td>'.$langs->trans('SelectProduct').'</td>';
     print '<td>';
     // Simple product selector via select2 or product ref input
-    print '<input type="number" name="product_id" value="'.($productId > 0 ? $productId : '').'" placeholder="Product ID" class="flat width100">';
+    print '<input type="number" name="product_id" value="'.($productId > 0 ? $productId : '').'" placeholder="'.$langs->trans('ProductId').'" class="flat width100">';
     print '</td>';
     print '<td>'.$langs->trans('EnterDemandQty').'</td>';
     print '<td><input type="number" name="demand_qty" value="'.$demandQty.'" min="1" class="flat width75"></td>';

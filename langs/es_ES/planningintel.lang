@@ -1,6 +1,6 @@
 # Stock Intelligence Module
 # Copyright (C) 2026 SiliconBlaze
-# Language file: en_US
+# Archivo de idioma: es_ES
 
 # Module info
 Module95100Name = Stock Intelligence
@@ -192,7 +192,7 @@ HideFormula = Hide Formula
 Ref = Ref
 Label = Label
 
-BackToList = Back to list
-ProductId = Product ID
+BackToList = Volver a la lista
+ProductId = ID de producto
 Visual = Visual
-Days = days
+Days = días

@@ -172,7 +172,7 @@ if ($productId > 0) {
                             7 => 'Jul', 8 => 'Aug', 9 => 'Sep', 10 => 'Oct', 11 => 'Nov', 12 => 'Dec');
 
         print '<table class="noborder centpercent">';
-        print '<tr class="liste_titre"><td>'.$langs->trans('Month').'</td><td class="right">'.$langs->trans('Index').'</td><td>Visual</td></tr>';
+        print '<tr class="liste_titre"><td>'.$langs->trans('Month').'</td><td class="right">'.$langs->trans('Index').'</td><td>'.$langs->trans('Visual').'</td></tr>';
         foreach ($seasonalData as $m => $idx) {
             $barWidth = min(max($idx * 100, 5), 300);
             $barColor = ($idx >= 1) ? '#28a745' : '#ffc107';
